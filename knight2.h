@@ -2,7 +2,7 @@
 #define __KNIGHT2_H__
 
 #include "main.h"
-
+//....hjgjhgjgjhghj
 // #define DEBUG
 
 enum ItemType {/* TODO: */};
