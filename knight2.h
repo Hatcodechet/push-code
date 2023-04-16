@@ -4,6 +4,7 @@
 #include "main.h"
 //....hjgjhgjgjhghj
 // hoi ga
+// ga qua
 // #define DEBUG
 
 enum ItemType {/* TODO: */};
