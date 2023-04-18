@@ -2,13 +2,17 @@
 
 // Linked List : BEGIN ---------------------------
 
-struct Node {
+class Node {
+private:
     int count;
     string itemType;
     Node* next;
+public:
+    Node* makeNode(int, string);
+    void insertFirst(Node*&, int);
 };
 // Tạo Node
-Node* makeNode(int cnt, string ItemType) {
+Node* Node::makeNode(int cnt, string ItemType) {
     Node* tmp = new Node();//Cấp phát
     tmp->count = cnt;
     tmp->itemType = ItemType;
@@ -42,7 +46,7 @@ public:
     virtual bool insertFirst(BaseItem* item);
 };
 
-virtual bool BaseBag::insertFirst(BaseItem* item)
+bool BaseBag::insertFirst(BaseItem* item)
 {
     if (cnt_item < bag_size)
     {
@@ -50,6 +54,27 @@ virtual bool BaseBag::insertFirst(BaseItem* item)
     }
 }
 
+BaseItem* BaseBag::get ( ItemType itemType )
+{
+    // duyệt tìm Node trong LinkedList trùng tên với itemType, nếu k có thì return NULL
+
+
+    //  nếu tìm ra thì đổi chổ nó với thằng đầu của linkedlist rồi return về Node đó
+}
+
+string BaseBag::toString ()
+{
+    string res = "Bag[count=";
+    int k = cnt_item;
+    string Num = "";
+    while(k > 0)
+    {
+        Num = (char)(k % 10 + '0');
+        k/=10;
+    }
+    res += Num + ";";
+    // Viết giúp t đoạn duyệt qua các phần tử và lấy tên của chúng trong LinkedList Item của lớp BaseBag
+}
 /* * * END implementation of class BaseBag * * */
 
 /* * * BEGIN implementation of class BaseKnight * * */
